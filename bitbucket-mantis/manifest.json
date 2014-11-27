@@ -1,0 +1,31 @@
+{
+	"manifest_version" : 2,
+	"name" : "redmine-bitbucket",
+	"description" : "redmine-bitbucket",
+	"version" : "0.1",
+	"permissions" : [
+		"tabs",
+		"https://bitbucket.org/*",
+		"http://bug.pe.vc/*"
+	],
+	"icons" : {
+		"16":"imgs/Z16.png", 
+		"48":"imgs/Z48.png", 
+		"128":"imgs/Z128.png" 
+	},
+	"web_accessible_resources" : [
+		"js/jquery.min.js", "js/br.js"
+	],
+	"content_scripts" : [
+		{
+			"matches" : ["https://bitbucket.org/*", "http://bug.pe.vc/*"],
+			"css" : ["css/br.css"],
+			"js" : ["js/jquery.min.js", "js/br.js"]
+		}
+	],
+	"browser_action" : {
+		"default_icon" : "imgs/Z128.png",
+		"default_title" : "bitbucket-redmine",
+    		"default_popup": "popup.html"
+	}
+}

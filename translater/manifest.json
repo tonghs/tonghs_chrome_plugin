@@ -1,0 +1,19 @@
+{
+	"manifest_version" : 2,
+	"name" : "翻译一下",
+	"description" : "翻译一下",
+	"version" : "0.1",
+	"permissions" : [
+		"tabs",
+        "contextMenus"
+	],
+	"icons" : {
+		"16":"imgs/Z16.png", 
+		"48":"imgs/Z48.png", 
+		"128":"imgs/Z128.png" 
+	},
+
+    "background": {
+        "scripts": ["translater.js"]
+    }
+}

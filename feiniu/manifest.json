@@ -1,0 +1,23 @@
+{
+	"manifest_version" : 2,
+	"name" : "feiniu",
+	"description" : "feiniu",
+	"version" : "0.1",
+	"permissions" : [
+		"tabs",
+        "contextMenus"
+	],
+	"icons" : {
+		"16":"imgs/Z16.png", 
+		"48":"imgs/Z48.png", 
+		"128":"imgs/Z128.png" 
+	},
+
+
+    "content_scripts" : [
+        {
+            "matches" : ["http://help.baidu.com/webmaster/*"],
+            "js" : ["js/jquery-2.2.3.min.js", "js/app.js"]
+        }
+    ]
+}
